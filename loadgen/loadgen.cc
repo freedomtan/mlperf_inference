@@ -1334,8 +1334,8 @@ void StartTest(SystemUnderTest* sut, QuerySampleLibrary* qsl,
   loadgen::SequenceGen sequence_gen;
   switch (sanitized_settings.mode) {
     case TestMode::SubmissionRun:
-      run_funcs.accuracy(sut, qsl, sanitized_settings, &sequence_gen);
       run_funcs.performance(sut, qsl, sanitized_settings, &sequence_gen);
+      run_funcs.accuracy(sut, qsl, sanitized_settings, &sequence_gen);
       break;
     case TestMode::AccuracyOnly:
       run_funcs.accuracy(sut, qsl, sanitized_settings, &sequence_gen);
